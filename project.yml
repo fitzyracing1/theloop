@@ -1,0 +1,27 @@
+name: TheLoop
+options:
+  bundleIdPrefix: com.joshuafitzgerald
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+targets:
+  TheLoop:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: .
+        excludes:
+          - "*.txt"
+          - "*.md"
+          - "project.yml"
+    info:
+      path: Info.plist
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.joshuafitzgerald.TheLoop
+      DEVELOPMENT_TEAM: ""
+      TARGETED_DEVICE_FAMILY: "1,2"
+      INFOPLIST_KEY_UIBackgroundModes:
+        - bluetooth-central
+        - bluetooth-peripheral
+        - fetch
